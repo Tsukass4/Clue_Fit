@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quién se comió mi proteína?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- INTRO -->
+    <div id="intro-screen" class="screen active">
+        <div class="intro-badge">Sistema Experto &bull; Clue Fitness</div>
+        <h1 class="title">💪 ¿Quién se<br><span class="title-accent">comió</span> mi<br>proteína?</h1>
+        <div class="dumbbell-divider"><span>🏋️</span></div>
+        <p class="intro-text">
+            Después de un entrenamiento agotador llegas a casa listo para tu proteína post-entreno.
+            <br><br>
+            Pero algo terrible ocurrió...
+            <br><br>
+            <strong>TU PROTEÍNA DESAPARECIÓ.</strong><br>
+            Investiga. Deduce. Atrapa al culpable.
+        </p>
+        <div class="intro-rules">
+            <div class="rule-item">🕵️ 5 sospechosos</div>
+            <div class="rule-item">📍 5 lugares</div>
+            <div class="rule-item">🔬 5 métodos</div>
+            <div class="rule-item">🎯 5 intentos</div>
+        </div>
+        <button class="menu-btn" id="start-btn">▶ Elegir Caso</button>
+    </div>
+
+    <!-- SELECCIÓN DE CASO -->
+    <div id="case-select-screen" class="screen">
+        <div class="select-header">
+            <div class="intro-badge">Expedientes activos</div>
+            <h2 class="select-title">Elige tu caso</h2>
+            <p class="select-subtitle">Cada caso tiene un culpable, un lugar y un método generados al azar. ¿Podrás resolverlo?</p>
+        </div>
+        <div id="case-grid" class="case-grid"></div>
+    </div>
+
+    <!-- GAME -->
+    <div id="game-screen" class="screen">
+        <div class="game-header">
+            <div>
+                <div class="case-badge">⚡ Caso activo</div>
+                <h2 id="case-title"></h2>
+            </div>
+            <div id="attempts" class="attempts-display">🔍 Intentos: 5</div>
+        </div>
+
+        <div class="case-info-box">
+            <p id="case-description"></p>
+            <p id="case-intro" class="case-intro-text"></p>
+        </div>
+
+        <div class="section">
+            <h3>🕵️ Sospechosos <span class="hint-text">— doble clic para marcar 🚩</span></h3>
+            <div class="card-container" id="suspects-container"></div>
+        </div>
+
+        <div class="section">
+            <h3>📍 Lugares</h3>
+            <div class="card-container" id="locations-container"></div>
+        </div>
+
+        <div class="section">
+            <h3>🔬 ¿Qué hizo con la proteína?</h3>
+            <div class="card-container" id="methods-container"></div>
+        </div>
+
+        <button class="investigate-btn" id="investigate-btn" style="margin-top:22px;">
+            🔍 Investigar
+        </button>
+
+        <div id="story-box">
+            🧩 Selecciona un sospechoso, un lugar y un método, luego pulsa Investigar.
+        </div>
+
+        <div class="fitness-footer">
+            <span>🏋️ No skip leg day</span>
+            <span>💪 Macros o muerte</span>
+            <span>🥤 La proteína es sagrada</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
